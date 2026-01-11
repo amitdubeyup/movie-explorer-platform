@@ -63,6 +63,10 @@ class MovieCreate(MovieBase):
     actor_ids: List[int] = []
     genre_ids: List[int] = []
 
+class RatingCreate(BaseModel):
+    movie_id: int
+    rating: int
+
 class MovieSummary(MovieBase):
     id: int
     director: Optional[Director] = None

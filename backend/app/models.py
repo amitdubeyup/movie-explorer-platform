@@ -25,6 +25,7 @@ class Movie(Base):
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String, index=True, nullable=False)
     release_year = Column(Integer, nullable=False)
+    rating = Column(Integer, nullable=False)
     synopsis = Column(String)
     duration = Column(Integer)  # duration in minutes
     director_id = Column(Integer, ForeignKey("directors.id"))

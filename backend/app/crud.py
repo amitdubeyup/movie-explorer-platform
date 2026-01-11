@@ -82,6 +82,16 @@ def get_movies(
 def get_movie(db: Session, movie_id: int) -> Optional[models.Movie]:
     return db.query(models.Movie).filter(models.Movie.id == movie_id).first()
 
+def create_rating(db: Session, rating: schemas.RatingCreate) -> models.Rating:
+    db_rating = models.Rating(**rating.dict())
+    db.add(db_rating)
+    db.commit()
+    db.refresh(db_rating)
+    return db_rating
+
+def get_rating(db: Session, rating_id: int) -> Optional[models.Rating]:
+    return db.query(models.Rating).filter(models.Rating.id == rating_id).first()
+
 def create_movie(db: Session, movie: schemas.MovieCreate) -> models.Movie:
     # Create movie without relationships first
     movie_data = movie.dict()

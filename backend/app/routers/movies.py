@@ -36,3 +36,8 @@ def read_movie(movie_id: int, db: Session = Depends(get_db)):
 def create_movie(movie: schemas.MovieCreate, db: Session = Depends(get_db)):
     """Create a new movie."""
     return crud.create_movie(db=db, movie=movie) 
+
+@router.post("/rating", response_model=schemas.Movie)
+def create_rating(rating: schemas.RatingCreate, db: Session = Depends(get_db)):
+    """Create a new movie."""
+    return crud.create_rating(db=db, rating=rating, movie_id=rating.movie_id) 
