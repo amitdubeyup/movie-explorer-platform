@@ -1,4 +1,4 @@
-# movie-explorer-platform
+# cine-explorer-react
 
 A comprehensive full-stack web application for exploring movies, actors, directors, and genres. This project demonstrates modern web development practices using **FastAPI** (backend) and **Vue.js** (frontend), designed for film enthusiasts to browse and discover movie information.
 
@@ -10,8 +10,8 @@ A comprehensive full-stack web application for exploring movies, actors, directo
 
 ```bash
 # Clone the repository
-git clone https://github.com/amitdubeyup/movie-explorer-platform.git
-cd movie-explorer-platform
+git clone https://github.com/amitdubeyup/cine-explorer-react.git
+cd cine-explorer-react
 
 ```
 
@@ -34,7 +34,7 @@ Update the `.env` file with your configuration values.
 ## 📁 Project Structure
 
 ```
-movie-explorer-platform/
+cine-explorer-react/
 ├── frontend/
 ├── backend/
 ├── .env.example
